@@ -10,6 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 
+
 mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log("MongoDB Connected"))
 .catch((err) => console.log(err));
@@ -21,7 +22,9 @@ const contactSchema=new mongoose.Schema({
 })
 
 const Contact =mongoose.model("Contact",contactSchema);
-
+app.get("/", (req, res) => {
+  res.send("Backend Running Successfully");
+});
 app.post('/submit',async(req,res)=>{
     try{
         const newContact=new Contact(req.body);
