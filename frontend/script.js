@@ -14,7 +14,7 @@ form.addEventListener("submit", async (e) => {
   try {
 
     const response = await fetch(
-      "http://localhost:5000/submit",
+      "https://shecan-backend-94tv.onrender.com/submit",
       {
         method: "POST",
         headers: {
