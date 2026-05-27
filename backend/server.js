@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 const contactSchema=new mongoose.Schema({
     name:String,
-    emial:String,
+    email:String,
     message:String
 })
 
